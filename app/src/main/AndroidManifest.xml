@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.saksham.yuminfo"
+    android:installLocation="auto">
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+
+    <application
+        android:allowBackup="true"
+        android:hardwareAccelerated="true"
+        android:icon="@drawable/logo"
+        android:supportsRtl="true"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name="com.saksham.yuminfo.activity.SplashActivity"
+            android:label="@string/app_name"
+            android:launchMode="standard"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.Worcipe.TransparentStatusBar.Blue">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name="com.saksham.yuminfo.login.DecideActivity"
+            android:theme="@style/AppTheme.Dark">
+            <intent-filter>
+                <action android:name="com.saksham.courseinfo.login.DECIDEACTIVITY" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name="com.saksham.yuminfo.login.RegisterupActivity"
+            android:theme="@style/AppTheme.Dark">
+            <intent-filter>
+                <action android:name="com.saksham.courseinfo.login.REGISTERUPACTIVITY" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name="com.saksham.yuminfo.MainActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name="com.saksham.yuminfo.CheeseDetailActivity"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:parentActivityName="com.saksham.yuminfo.MainActivity">
+            <meta-data android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.saksham.yuminfo.MainActivity" />
+        </activity>
+
+        <activity android:name="com.saksham.yuminfo.rating.RateActivity1"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:parentActivityName="com.saksham.yuminfo.MainActivity">
+            <meta-data android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.saksham.yuminfo.MainActivity" />
+        </activity>
+
+        <activity android:name="com.saksham.yuminfo.review.ReviewActivity1"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:parentActivityName="com.saksham.yuminfo.MainActivity">
+            <meta-data android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.saksham.yuminfo.MainActivity" />
+        </activity>
+
+    </application>
+
+</manifest>
